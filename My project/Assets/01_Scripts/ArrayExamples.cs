@@ -75,7 +75,7 @@ public class ArrayExamples : MonoBehaviour
         if (enemyPrefabs != null && enemyPrefabs.Length > 0)
         {
             // 랜덤 위치에 랜덤 적 생성
-            Vector3 spawnPosition = new Vector3(Random.Range(-10f, 10f), 0, Random.Range(-10f, 10f));
+            Vector3 spawnPosition = new(Random.Range(-10f, 10f), 0, Random.Range(-10f, 10f));
             int randomEnemyIndex = Random.Range(0, enemyPrefabs.Length);
             Instantiate(enemyPrefabs[randomEnemyIndex], spawnPosition, Quaternion.identity);
             Debug.Log($"적 생성됨: {enemyPrefabs[randomEnemyIndex].name}");
